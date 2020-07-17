@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:id="@+id/div_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_above="@id/main_rgroupTabMenu"/>
+
+    <RadioGroup
+        android:id="@+id/main_rgroupTabMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <RadioButton
+            android:id="@+id/main_rbtnChannel"
+            style="@style/TabMenuItem"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="视频" />
+
+        <RadioButton
+            android:id="@+id/main_rbtnMessage"
+            style="@style/TabMenuItem"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="消息" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@android:drawable/ic_input_add" />
+
+        <RadioButton
+            android:id="@+id/main_rbtnMy"
+            style="@style/TabMenuItem"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="我的" />
+
+        <RadioButton
+            android:id="@+id/main_rbtnMore"
+            style="@style/TabMenuItem"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="更多" />
+
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@id/div_tab_bar"
+        android:id="@+id/ly_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#333333" />
+
+    </FrameLayout>
+
+</RelativeLayout>
